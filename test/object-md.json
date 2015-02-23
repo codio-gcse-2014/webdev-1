@@ -1,0 +1,47 @@
+
+
+{ 
+  "md-object" : {
+    "object":  {
+      "method": "alert(string)" {
+        "desc": "Displays a pop up message.",
+        "example": "`window.alert('This is not a valid selection');`",
+        "url":"https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"
+      },
+    
+    
+    "object":  {    
+      "method": "open" {
+        "desc": "Opens a new browser tab.",
+        "example": "`windowObjectReference = window.open(\"http://www.cnn.com/\", \"CNN_WindowName\")`",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/open"
+      },
+      "method": "close" {
+        "desc": "Closes the current browser tab.",
+        "example": "`window.close()`",
+        "url":"https://developer.mozilla.org/en-US/docs/Web/API/Window/close"
+      },
+      "property": "" {
+        "desc": "Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.",
+        "example": "`var height = window.innerHeight;`",
+        "url":"https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight"    
+      },
+      "property": "" {
+        "desc": "Width (in pixels) of the browser window viewport including, if rendered, the vertical scrollbar.",
+        "example": "`var width = window.innerWidth;`",
+        "url":"https://developer.mozilla.org/en-US/docs/Web/API/window/innerWidth"    
+      },
+      "event": "onclick" {
+        "desc": "The name of the function that should be called when the user clicks anywhere in the browser page. This allows your code to do anything you want when this happens.",
+        "example": "`document.onclick = myFunctionName;`",
+        "url":"https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick"    
+      },
+      "event": "ondeviceorientation " {
+        "desc": "The name of the function that should be called when a devices orientation changes, for instance a tablet or phone. This allows your code to do anything you want when this happens.",
+        "example": "`document.ondeviceorientation = myFunctionName;`",
+        "url":"https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick"    
+      }
+    }
+  }
+}
+
