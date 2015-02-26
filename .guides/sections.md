@@ -4,19 +4,13 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 1-html/index.html
+    path: 01-html/index.html
     panel: 0
-    index: 0
-    type: file
-    arg: 1-html/index.html
   - action: open
-    path: "#preview: 1-html/index.html"
+    path: "#preview: 01-html/index.html"
     panel: 1
-    index: 1
-    type: preview
-    arg: 1-html/index.html
 layout: 3-cell-tree
-step: 1-html;img;audio
+step: 01-html;img;audio
 
 ---
 We are now going to look at the way you build everything from web sites to web products like Facebook or Codio. The Codio product you are using right now is a web application, albeit a very complex one.
@@ -104,13 +98,13 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 2-html-proper/index.html
+    path: 02-html-proper/index.html
     panel: 0
   - action: open
-    path: "#preview: 2-html-proper/index.html"
+    path: "#preview: 02-html-proper/index.html"
     panel: 1
 layout: ""
-step: 2-html-proper;img;audio
+step: 02-html-proper;img;audio
 
 ---
 In the previous sections, we kept our HTML simple so as not to scare you. If you look at `index.html` now, you'll see it looks different and a bit messier.
@@ -142,19 +136,13 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 3-task1/index.html
+    path: 03-task1/index.html
     panel: 0
-    index: 0
-    type: file
-    arg: 3-task1/index.html
   - action: open
-    path: "#preview: 3-task1/index.html"
+    path: "#preview: 03-task1/index.html"
     panel: 1
-    index: 1
-    type: preview
-    arg: 3-task1/index.html
 layout: ""
-step: 3-task1;img;audio
+step: 03-task1;img;audio
 
 ---
 We have now created a new `index.html` page for you on the left. Create your own page by inserting content within the `<body>` tag.
@@ -180,7 +168,7 @@ To get an image from the web instead, you simply replace everything between the 
 
 Watch the video below for an explanation and to see how to get an image url from Google Images.
 
-<iframe src="//player.vimeo.com/video/120383889" width="500" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/120383889" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 After you've selected 'Copy image URL', you put the cursor in between the `""` of your `src` attribute and paste it in.
 
@@ -255,16 +243,25 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 4-js-intro/index.html
+    path: 04-js-intro/index.html
     panel: 0
+    index: 0
+    type: file
+    arg: 04-js-intro/index.html
   - action: open
-    path: 4-js-intro/main.js
+    path: 04-js-intro/main.js
     panel: 0
+    index: 1
+    type: file
+    arg: 04-js-intro/main.js
   - action: open
-    path: "#preview: 4-js-intro/index.html"
+    path: "#preview: 04-js-intro/index.html"
     panel: 1
+    index: 2
+    type: preview
+    arg: 04-js-intro/index.html
 layout: ""
-step: 4-js-intro;img;audio
+step: 04-js-intro;img;audio
 
 ---
 Now we get to a really exciting part. We are going to add a tiny bit of intelligence to the page.
@@ -367,16 +364,16 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 5-css-intro/index.html
+    path: 05-css-intro/index.html
     panel: 0
   - action: open
-    path: 5-css-intro/main.css
+    path: 05-css-intro/main.css
     panel: 0
   - action: open
-    path: "#preview: 5-css-intro/index.html"
+    path: "#preview: 05-css-intro/index.html"
     panel: 1
 layout: ""
-step: 5-css-intro;img;audio
+step: 05-css-intro;img;audio
 
 ---
 We're now going to introduce you to the missing piece of the jigsaw - CSS. 
@@ -406,18 +403,110 @@ files: []
 ---
 On the left hand side, you will see a file called `main.css`. What this does is apply *styles* to the different HTML elements. If we don't specify a style for an element, then it uses the default styles that the browser decides.
 
-Here are some important things to note
+Here are some things to note about a CSS *rule*. Don't worry about remembering it all.
 
-- the HTML tag you used in your HTML file (`<h1>, <p>` etc. ) is used in the CSS file **without** the `<>` angled brackets.
-- After the tag name come the styling attributes **between** two `{}` curly braces
-- **Indent** your CSS attribute
-- Follow it with a `:` semi-colon then add a new line
+```css
+h1 {
+  color: blue;
+  font-size: 20px;
+}
+```
+
+- the whole thing is called a CSS *rule*
+- the `h1` part is called a *selector* and it matches the HTML tag you use in your HTML file
+- the keyword `color` is called a *property*
+- to the right of the `:` is the *value* (blue)
+- after the value is a `;` to separate it from the next *keyword*
+
 
 ## Preview
-Take a look at the preview window. You will see that our page looks different. It's not exactly a work of art but it has changed for the better.
+Take a look at the preview window. You will see that our page looks different. It's not exactly a work of art but it is a bit more interesting. Now take a look at `main.css` and look at the tag selectors.
 
 - **body** : the body styling is saying "for the entire body of the page and everything on it, a) set the background color to light-gray and b) use the font called Open Sans. We'll explain fonts more in a later section. The important thing to note here is that the font will now change for all other elements that are contained within the `<body>` tag of our HTML, so the `<h1>` and `<p>` elements are changed.
 - **h1** : here we are saying that wherever the browser sees an `<h1>` element on the page, we should a) set the color to blue and b) set the font-size to be 20 pixels high. You can play with these values if you like and see what happens.
 - **img** : we are doing something nice here. We are saying that for all `<img>` elements on the page, we should a) provide a solid border around the edge b) make the border 3 pixels thick and c) provide rounded corners to the border with a *radius* of 3 pixels. Again, feel free to change this value and see what happens.
 
+
+
+---
+title: Available CSS Selectors
+files: []
+
+---
+Each html element has its own set of associated CSS keywords. You'd be amazed at how many possibilities there are. You can control everything you can think of and many you can't think of.
+
+So how do you know what CSS keywords are available for any given HTML element?
+
+## Mozilla Reference
+Rather than list out everything here, this is a great place to introduce the Mozilla CSS reference page by [clicking here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+When you visit the page, you may be overwhelmed by the number of keyword properties available. **Don't be!**
+
+What you should do is the following
+
+- Think of what it is you want to change. For example, if you want to change the color, chances are, the property you are after is called `color`. So look for it and then click on it.
+- When you have clicked on it you will find an explanation and some examples. Where it says `element` this means the HTML element you want to change, so it might be `h1` or `p` or `img`. 
+- Try it out and see what happens. If it doesn't work then try again.
+- You can and should also use Google to search for something, for example `change line height CSS`. You will find your way pretty quickly to some examples.
+
+Experimentation is a good way to learn, so don't be afraid and be patient until you get it right.
+
+On the next page, we'll set you a challenge and give you some hints so you can learn by doing.
+---
+title: Your own CSS experiment
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 06-css-play/index.html
+    panel: 0
+  - action: open
+    path: 06-css-play/main.css
+    panel: 0
+  - action: open
+    path: "#preview: 06-css-play/index.html"
+    panel: 1
+layout: ""
+step: 06-css-play;img;audio
+
+---
+On the left, you'll find some ready made HTML and a starter CSS file. What we want you to do is to style your page so it looks something like the image below. 
+
+Click on it to enlarge it if you like. You don't have to make it exactly the same and you can use your imagination however you want. You can probably make it look a lot nicer than we have.
+
+![](.guides/img/css-play-1.png)
+
+
+## Basic Tasks
+The following list summarises what you might want to do first
+
+- Give the page (body) a background color
+- Create an `h1` style with any font-size and color you choose
+- Create an `h2` style that is smaller that the `h1` style but bigger than the normal text
+- Choose appropriate properties for the regular text for the `p` elements
+- Do something interesting to style the `strong` (red and a larger font size), `i` (green) and `u` (pink) elements (bold, italic and underlined)
+- Anything else that takes your fancy.
+
+## Advanced Tasks
+You can also try these ...
+
+- Put a dotted border around the image, specify the line thickness and make the corners rounded. Not sure about the dotted line? Try looking on MDN by [clicking here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) and search for `border-style`, then look at the examples.
+- Put a border around the `h1` tag - yes, it works with all sorts of different elements.
+- Try making the cow image only 150 pixels wide. [Look here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) again and have a go.
+
+---
+title: "Developer Tools - HTML & CSS"
+files: []
+
+---
+Now we are going tok play with something that may seem scary at first, but believe us - it will make your life **much easier** as a web developer.
+
+We are going to assume that you are using the Chrome browser for these instructions but other browsers have similar tools. Firefox is a good alternative.
+
+>Developer tools let's you see what's going on behind the scenes. You can view and play with your HTML, CSS and even your Javascript.
+
+## Seeing what's going on with your HTML & CSS
+The first thing we are going to look at is how Developer Tools lets you see how the browser sees your HTML and CSS.
+
+Watch this video for an overview.
 
