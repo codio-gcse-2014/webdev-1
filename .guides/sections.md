@@ -312,9 +312,9 @@ files: []
 Now make sure you are looking at `main.js` on the left. 
 
 ## Video overview
-If you would rather watch a video than read, then here is a video overview.
+If you would rather watch a video than read, then here is a video overview. Expand it to full screen once it is running.
 
-<iframe src="//player.vimeo.com/video/120596684" width="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/120596684" width="500" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Accessing an HTML element from Javascript
 Whenever we want to do something with an HTML element, we have to get it from the *DOM*, which means **D**ocument **O**bject **M**odel. Don't worry about this name, we'll just use it for now.
@@ -460,12 +460,21 @@ files:
   - action: open
     path: 06-css-play/index.html
     panel: 0
+    index: 0
+    type: file
+    arg: 06-css-play/index.html
   - action: open
     path: 06-css-play/main.css
     panel: 0
+    index: 1
+    type: file
+    arg: 06-css-play/main.css
   - action: open
     path: "#preview: 06-css-play/index.html"
     panel: 1
+    index: 2
+    type: preview
+    arg: 06-css-play/index.html
 layout: ""
 step: 06-css-play;img;audio
 
@@ -495,13 +504,143 @@ You can also try these ...
 - Try making the cow image only 150 pixels wide. [Look here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) again and have a go.
 
 ---
-title: Cool CSS Example
+title: Classes
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 07-classid/index.html
+    panel: 0
+  - action: open
+    path: 07-classid/main.css
+    panel: 0
+  - action: open
+    path: "#preview: 07-classid/index.html"
+    panel: 1
+layout: ""
+step: 07-classid;img;audio
+
+---
+Take a look at the HTML, CSS and the preview. We now have a different setup. 
+
+We have some images of cows and some images of sheep. We want to style the cows in one way and the sheep in another.
+
+If we just style the `img` element, then we will be styling all the images, so both cows and sheep. Not what we want.
+
+Take a look at the HTML.
+
+```html
+<img class="cows" src="/img/cow-1.jpg">
+<img class="cows" src="/img/cow-2.jpg">
+<img class="sheep" id="color-sheep" src="/img/sheep-1.jpg">
+<img class="sheep"  src="/img/sheep-2.jpg">
+```
+
+The `class` attribute lets us specify a class name for each `img` element. Look at this carefully and make sure you get it.
+
+Now look at the CSS. Here you can see how we provide specific styling for cows and for sheep. We simple start the CSS rule with a `.` followed by the class name we used in our HTML.
+
+```css
+.cows {
+  width: 100px;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+}
+
+.sheep {
+  width: 100px;  
+  border-radius: 20px;
+}
+```
+
+
+---
+title: IDs
 files: []
+
+---
+## IDs
+An ID is similar to a class but rather than styling many elements, it lets us style one specific element.
+
+Again, take a look at the HTML. 
+
+```html
+<img class="sheep" id="color-sheep" src="/img/sheep-1.jpg">
+```
+
+Here, we have given an ID to this specific element by incuding `id="color-sheep"`. Now look at the CSS and you will see we can style this individual element. 
+
+```css
+#color-sheep {
+  box-shadow: 8px 8px 5px gray;    
+}
+```
+
+See how the CSS selector start with the `#` character?
+
+Your HTML should only include one element with this ID.
+
+In a moment, we'll see how to play with this using the browser's 'Developer Tools' utility.
+
+---
+title: Important CSS observation
+files: []
+layout: ""
+step: 08-coolcss
+
+---
+There is one important observation to make about the way CSS works. Take a look at `main.css`. You'll notice we have this CSS rule ...
+
+```css
+img {
+  margin-left: 40px;
+}
+```
+
+This adds a margin of 40 pixels to the left of ALL images. It does not matter whether it is a cow image or a sheep image. It will add it to them all (so they are not so cramped together).
+
+## Overriding
+However, if you wanted to have a different left margin for the sheep, you could still add in a `margin-left` property and it would then override the `margin-left` property of the `img` selector.
+
+Go ahead and override the left margin for a sheep to something like `100px`. 
+
+## Shadow effect
+You can also see that for the special sheep with the ID of `color-sheep`, we have added a shadow effect. If you want to read up on how this works, [click here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow).
+
+You can use this effect on different HTML elements. Try it on the `h1` selector, for example.
+
+Or you could try something that works better with `h1` and other text elements...
+
+```css
+  text-shadow: 3px 3px 5px #595959;  
+```
+
+- play with the values and see what happens
+- change the color by hovering over the `#595959` value then clicking inside the color popup; you can click in the color area to select a new color
+---
+title: Cool CSS Example
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 08-coolcss/index.html
+    panel: 0
+  - action: open
+    path: 08-coolcss/main.css
+    panel: 0
+  - action: open
+    path: "#preview: 08-coolcss/index.html"
+    panel: 1
+layout: ""
+step: 08-coolcss
 
 ---
 We just want to give you an idea of how powerful the combination of HTML and CSS can be.
 
-Don't worry in the slightest about understanding how this actually works. ALl you need to take on board is the following
+Click (multiple times) on the sections in the preview to see what happens.
+
+Don't worry in the slightest about understanding how the CSS actually works. All you need to take on board is the following
 
 - Notice how simple the HTML is. HTML should show only the structure of the document. The heavy-lifting should be done by CSS (and Javascript). If you one day decide you want to completely change the style, you only need change the CSS.
 - If you look at the HTML, you will see that you are familiar with all the elements except `<ul>` and `<li>`, which are 'list' elements, which we'll use ourselves in a later module.
@@ -513,19 +652,19 @@ files:
   - action: close
     path: "#tabs"
   - action: open
-    path: 07-devtools/index.html
+    path: 09-devtools/index.html
     panel: 0
   - action: open
-    path: 07-devtools/main.css
+    path: 09-devtools/main.css
     panel: 0
   - action: open
-    path: 07-devtools/main.js
+    path: 09-devtools/main.js
     panel: 0
   - action: open
-    path: "#preview: 07-devtools/index.html"
+    path: "#preview: 09-devtools/index.html"
     panel: 1
 layout: ""
-step: 07-devtools;img;audio
+step: 09-devtools;img;audio
 
 ---
 Now we are going to play with something that may seem scary at first, but believe us - it will make your life **much easier** as a web developer.
@@ -539,9 +678,9 @@ The first thing we are going to look at is how Developer Tools lets you see how 
 
 Watch this video for an overview.
 
+<iframe src="//player.vimeo.com/video/120383889" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-
->If you make changes in your code, you will need to refresh teh preview so the browswer loads those changes. If your dev tools window is already open, close it and reopen it so it also gets the new changes.
+>If you make changes in your code, you will need to refresh the preview so the browswer loads those changes. If your dev tools window is already open, close it and reopen it so it also gets the new changes.
 ---
 title: Developer Tools - Javascript
 files: []
@@ -557,6 +696,8 @@ The developer tools let you do some very powerful things to help you out with yo
 - If your code is generating errors, dev tools will show errors in the console
 
 The video below explains how this works.
+
+<iframe src="//player.vimeo.com/video/120383889" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Using the debugger in Codio
 When you use the developer tools debugger in Javascript, we strongly recommend that you debug the preview in a separate, dedicated browser tab, not in an in-Codio panel. The reason for this is that Codio itself is a web application and so your application is a web app within another web app, which makes things little more complex.
@@ -586,11 +727,202 @@ Now that we have introduced you to devloper tools, play around with the the HTML
 
 As long as you are reasonaby comfortable with these things, that's enough for now. We'll come back to the debugger later when we move on to more advanced examples.
 ---
-title: More advanced Javascript
+title: Event listeners
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 10-morejs/index.html
+    panel: 0
+  - action: open
+    path: 10-morejs/main.js
+    panel: 0
+  - action: open
+    path: "#preview: 10-morejs/index.html"
+    panel: 1
+layout: ""
+step: 10-morejs;img;audio
+
+---
+This is the last major thing we will cover in this module. Events and event listeners are incredibly important in web development.
+
+>What are Events?
+>
+> When _______ happens, do ______
+>
+> When **a user clicks on the page**, do **display a cow where they clicked**
+> When **the space bar is pressed**, do **fire a bullet**
+> When **the mouse button is released**, do **throw a bird**
+
+### Using HTML to create an event listener
+In an earlier chapter, we created an event listener from within the HTML like this
+
+```html
+<img src="/img/cow.jpg" onclick="moo();">
+```
+
+Whenever that particular image is clicked, the `moo()` function is called, which triggers the moo sound.
+
+In this example, we are creating an event listener from HTML like this
+
+```html
+<body onload="main();"></body>
+```
+
+This is listening for the `onload` event that triggers once the page is fully loaded by the browser.
+
+### Using Javascript to listen for events
+However, in our example on the left, we want to create the cow only when the user clicks the mouse button and we want to create it at the location the user clicked.
+
+To achieve this, we need to use Javascript. Take a look at the function `main()` in `main.js`, itself an event listener as described above.
+
+```html
+document.addEventListener("click", createAnimal, false);
+```
+
+Let's explain this in more detail
+
+- `document.addEventListener` means "add an event listener to the document (the whole web page)".
+- The `"click"` part specifies the name of the event we are listening out for.
+- `createAnimal` is the name of the function that should be called whenever the `click` event happens.
+
+
+
+
+
+
+
+---
+title: Event handlers
 files: []
 
 ---
-This is the last thing we'll deal with in this module. Although this looks like a mouthful, all we are doing is taking what we have learnt in this module so far and making something more interesting.
+The event handler is the function that gets called when the event *fires*.
+
+In our example, `createAnimal()` is the event handler. In this case, our event handler function needs to create a new cow at the location the user clicked with the mouse.
+
+This introduces some new concepts, so let's take a look.
+
+## 1. Prepare a new HTML element
+
+```javascript
+var animal = document.createElement("img");
+```
+
+We want to add a new image to the web page. The whole page page is referred to as the 'document'. Javascript gives us access to a special *object* called `document` which contains properties (more about this later) and functions.
+
+One such function is `createElement()`. This function creates a brand new element within the document, which is exactly what we need.
+
+What we end up with is a new element variable. This variable holds all the information about the image element but it has not yet added it to the page, which happens later.
+
+## 2. Set the 'src' attribute
+Look at the following HTML, which creates an image element in the HTML with a source (src) attribute of "/img/cow.jpg".
+
+```html
+<img src="/img/cow.jpg" />
+```
+
+In Javascript, we can make the same settings using our `animal` variable.
+
+```javascript
+animal.src="/img/cow-1.jpg"; 
+```
+
+## 3. Setting the 'style' attributes
+The style attribute covers the same properties we use in a CSS file. Look at this CSS. We don't have a CSS file in this example, but if we did, this is what it would look like.
+
+```css
+img {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}
+```
+
+We can achieve the same thing using Javascript as follows
+
+```javascript
+animal.style.width = "100px";
+animal.style.position = "fixed";
+animal.style.top = event.y + "px";
+animal.style.left = event.x + "px";
+```
+
+The `position: fixed` property tells the browser that our image should have be fixed at an x, y coordinate location on the page. We then use `top` and `left` to specify those coordinates.
+
+Try removing them from your Javascript and see what happens when you refresh and preview it.
+
+## 4. The event parameter
+If you look at our event handler function, you will notice it contains an `event` parameter.
+
+```javascript
+function createAnimal(event) {
+```
+
+The event parameter is an *object* that contains all the information we could possibly want to know about the event that has been triggered. This includes `event.x` and `event.y`, which contain the x and y coordinates of the place where the mouse was clicked within the web page.
+
+We use those to set the `animal.style.top` (y) and `aninal.style.left` (x) coordinates.
+
+```javascript
+animal.style.width = "100px";
+animal.style.position = "fixed";
+animal.style.top = event.y + "px";
+animal.style.left = event.x + "px";
+```
+
+So, if you click about 200 pixels in from the left of the page, `event.x` would contain 200. We can now set the `left` position 
+
+```javascript
+animal.style.left = "200px";
+```
+
+Which would be this in CSS
+
+```css
+left: 200px;
+```
+
+
+## 5. Adding the new element to the page
+Finally, once we have got everything configured properly, we are ready to add the element to our page. This is done using
+
+```javascript
+document.body.appendChild(animal);
+```
+
+It is saying "add the animal variable to the body section of our document (web page)".
+
+In the next full module on Javascript, we'll explain all this fully, so don't worry if it seems a bit weird at this stage.
+
+
+
+
+
+
+---
+title: Advanced example
+files:
+  - action: close
+    path: "#tabs"
+  - action: open
+    path: 11-advanced-js/index.html
+    panel: 0
+  - action: open
+    path: 11-advanced-js/main.css
+    panel: 0
+  - action: open
+    path: 11-advanced-js/main.js
+    panel: 0
+  - action: open
+    path: "#preview: 11-advanced-js/index.html"
+    panel: 1
+layout: ""
+step: 11-advanced-js;img;audio
+
+---
+This advanced example is the last thing we'll deal with in this module. Although this looks like a real mouthful, we are only introducing one new concept, which we'll explain in the next section. 
+
+But really this is nothing more than a bigger, more interesting application.
 
 ## Instructions
 This little web application lets you do the following ...
@@ -603,10 +935,137 @@ This little web application lets you do the following ...
 - You can press the 1, 2 or 3 keys to create 1, 2 or 3 animals.
 - Try different key combinations to get different effects.
 
-## Video Explanation
-Rather than explain everything with huge amounts of text, this is better done with a video. Take a look and watch full screen.
+## Video
+Watch the video to see how the applicaiton works.
+
+<iframe src="//player.vimeo.com/video/120383889" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
+---
+title: How it works
+files: []
+
+---
+Now let's see how our code actually works. We'll leave you to look at the code an figure it out what is going on in details. In summary, though
+
+- We create an empty HTML page and call `main()`
+- In `main()` We add an event listener for the `click` and `keypress` events
+- We create event handlers for a) creating new image elements and b) monitoring key presses for our user settings
+- We also create event handlers for each new image so it can be deleted by clicking on it
+
+## Flow chart
+Here is a flow chart that describes the process visually. Click on it to enlarge.
+
+![](.guides/img/flow-event-handlers.png)
+
+
+---
+title: Objects
+files: []
+
+---
+We have introduced an important concept in this example - *objects*. Objects are incredibly important in Javascript and we have a really easy *use case* here to introduce them to you.
+
+>An object is simply a variable that contains information and performs functions. Think of a smartphone as an object. 
+>
+>It has **properties** (screen width, screen height, CPU speed, memory size, weight, color etc.)
+>
+>It also performs **functions** (make a call, play a game, get current location)
+>
+
+If we represent the smartphone as an object in Javascript, it could look like this.
+
+```javascript
+var smartPhone = {
+  screen {
+    width: 2.5,
+    height: 4
+  }
+  cpuSpeed: 2.1,
+  memory: 2,
+  weight: 300,
+  color: "gold",
+  call: makeCall,
+  currentLocation: getGPSLocation
+}
+```
+
+### Reading object properties
+This is really easy. The following code reads values from our object. Here we are reading the values into variables so it makes sense.
+
+```javscript
+mem = smartPhone.memory;
+weight = smartPhone.weight;
+width = smartPhone.screen.width;
+```
+
+Notice that the last one is really interesting. Here we have a *nested* object, an object within an object. 
+
+## Writing to object properties
+Let's say we want to set an object property. You reference the object property in exactly the same way.
+
+```javscript
+smartPhone.memory = mem;
+smartPhone.weight = 255;
+smartPhone.screen.width = width;
+```
+
+## Calling functions
+We have already called object functions. Look at the way we create a new HTML element in `main.js`
+
+```javascript
+var animal = document.createElement("img");
+```
+
+The object here is `document` (the object that contains all information about the browser's web page) and the function is `createElement()`.
+
+## Our object
+Now when you look at the object in `main.js` you can see it is pretty clear.
+
+```javascript
+var userChoices = {
+  isCow: true,
+  isColor: true,
+  number: 1
+}
+```
+The `userChoices` object variable holds information about the selections the user has made for our animal creation.
+
+We have initialized the object to contain the starting values and after that, these get 
+
+- written to by the `getKeyPress()` event handler
+- read from by our `createAnmial()` event handler
+
+Take a good look at the code and all should become clear.
+
+
+
+---
+title: Global variables
+files: []
+
+---
+When you create a variable inside a function, the variable is
+
+- created when encountered within the function
+- destroyed when the function terminates (finishes)
+
+Take a a look at the `createAnimal()` function inside `main.js`. 
+
+```javascript
+function createAnimal(event) {
+  
+  var ctr;
+```
+
+The `ctr` variable is created when `var ctr;` is executed. It then can be used within the `createAnimal()` function while it is executing. 
+
+However, as soon as the function terminates, it is detroyed. 
+
+- the next time the function is entered it has to be created again
+- no other function can access `ctr`.
+
+In our application, we need to make sure that the `userChoices` object variable can be accessed from 
 ---
 title: "That's all folks"
 files: []
@@ -622,4 +1081,6 @@ We're done with this introduction to web development. We want to take you deeper
 
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/Q3bbsDJWlXQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+outube.com/embed/Q3bbsDJWlXQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
 

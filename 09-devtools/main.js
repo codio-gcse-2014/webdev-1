@@ -10,3 +10,11 @@ function moo() {
   noSuchFunction(x);  
 
 }
+
+function baa() {
+   
+  var audio = document.getElementById("sheepsound");   
+  audio.play(); 
+
+}
+
