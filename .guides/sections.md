@@ -10,7 +10,7 @@ files:
     path: "#preview: 01-html/index.html"
     panel: 1
 layout: 3-cell-tree
-step: 01-html;img;audio
+step: 01-html;img;audio;my-play
 
 ---
 We are now going to look at the way you build everything from web sites to web products like Facebook or Codio. The Codio product you are using right now is a web application, albeit a very complex one.
@@ -19,7 +19,7 @@ You are about to take some steps on the same road that the developers of Codio j
 
 It is a really exciting journey and one that will amaze you the more you learn. You can move through this at any speed you like and you will get the chance to write your own code.
 
-The more you learn, the more you will be able to look things up on the Internet. There will come a point before too long, where you will only need tutorials for specialist areas and the rest you can simply Google.
+Once you have completed this introduction module, you can deepend your knowledge of HTML, CSS and Javascript with further modules.
 
 Let's get started!
 ---
@@ -71,29 +71,30 @@ Attributes provide the browser with additional information about an HTML element
 <img id="shaggycow" src="/img/cow.jpg" />
 ```
 
-Here we have 2 attributes
+The `<img>` tag has one attribute
 
-- `id="shaggycode"` which uniquely identifies this element with a unique name. Don't worry about why we're doing this. We'll explain in a moment.
 - `src="/img/cow.jpg"` which tells the browser where to load the actual image from. We'll explain how this works in the next section.
 
 ## Attributes of the audio tag
 ```html
-<audio id="cowsound" src="/audio/moo.mp3" controls></audio>
+<audio src="/audio/moo.mp3" controls></audio>
 ```
 
-Here we have 3 attributes
+Here we have 2 attributes
 
-- `id="cowsound"` which uniquely identifies this audio element with a unique name. Don't worry about why we're doing this. We'll explain in a moment.
-- `src="/audio/moo.mp3"` which tells the browser where to load the actual image from. We'll explain how this works in the next section.
-- `controls` which tells the browser that it should display simple audio play controls so we can play the moo sound. Try replacing this with `autoplay` and refresh the preview (at the top left of the preview window). See what happens now? You could also have both `controls` and `autoplay`. Try it out.
+- `src="/audio/moo.mp3"` which tells the browser where to load the actual image from, just like for the image. We'll explain how this works in the next section.
+- `controls` which tells the browser that it should display simple audio play controls so we can play the moo sound. Take a look at the preview window and you'll see them at the bottom. Try replacing this with `autoplay` and refresh the preview (at the top left of the preview window). See what happens now? You could also have both `controls` and `autoplay`. Try it out.
+
+## Attributes of `<p>` and `<h1>`
+Look at `index.html` and you'll see that we have not used any attributes for these.
 
 ## Other elements
-Many HTML elements have their own attributes. We'll cover them when we need them. Later on, you'll just Google them.
+Different HTML elements have their own set of attributes. We'll cover them when we need them. Later on, you'll just Google them.
 
 
 
 ---
-title: A proper HTML file
+title: A quick review of an HTML file
 files:
   - action: close
     path: "#tabs"
@@ -104,30 +105,31 @@ files:
     path: "#preview: 02-html-proper/index.html"
     panel: 1
 layout: ""
-step: 02-html-proper;img;audio
+step: 02-html-proper;img;audio;my-play
 
 ---
-In the previous sections, we kept our HTML simple so as not to scare you. If you look at `index.html` now, you'll see it looks different and a bit messier.
+These are the main tags that all HTML files normally have. 
 
 ## DOCTYPE
-You really do not need to know about this. If you leave it out it will still work but having it there is good practice.
+`<!DOCTYPE html>` tells the browser that what follows is a HTML document.
 
-## The html tag
+## The `<html>` tag
 Again, just put it in there. No need to understand this for a long time if ever. It contains our `<head></head>` and `<body></body>` tags. 
 
-## The head tag
-The `<head></head>` tags should be. It's empty for now but in a section coming up, we'll need it.
+## The `<head>` tag
+The `<head></head>` tags are empty for now but in a section coming up, we'll put something in there.
 
 Whatever is in the `<head>` gets fully loaded before the browser displays the `<body>`.
 
-## The body tag
-Our main HTML content is the same but we have now simple put it inside `<body></body>` tags. This is how it should be done properly. The `<body>` is where the real action happens.
+## The `<body>` tag
+The `<body>` is where the real action happens and it's where the bulk of the HTML content lives. 
 
-## Closing the tags
-Again it is **really important** to match your opening tags with closing tags. Really look at the HTML code to see what is going on.
+|||important
+##Closing the tags
+It is **really, really important** to match your opening tags with closing tags. If you don't close them ten you may experience unexpected results or your page may not work at all. There are exceptions (`<br>`) but most tags require closing.
 
 ## In summary
-What we have talked about here does not need to be learned. You will see it on every page we use from now on and you will get used to ignoring the bits you don't need.
+What we have talked about here does not need to be memorized right now. You will see it on every page we use and you will get used to using things the right way.
 
 
 ---
@@ -261,7 +263,7 @@ files:
     type: preview
     arg: 04-js-intro/index.html
 layout: ""
-step: 04-js-intro;img;audio
+step: 04-js-intro;img;audio;my-play
 
 ---
 Now we get to a really exciting part. We are going to add a tiny bit of intelligence to the page.
@@ -273,9 +275,14 @@ We will make our cow moo! All you need to do is click on the cow and it will moo
 ### Referencing our Javascript file
 Although it is actually possible to put Javascript code in the HTML file, the correct way to do it is to use another file.
 
-Check out the file tree and you will find a file called `main.js`. This should be open already in the top panel on the left. You will need to click on the tab at the top to see the file.
+|||important
+## The File Tree
+The file tree is the panel on the extreme left hand side. It is a folder structure for our project. You can see that `index.html` and `main.js` both live in the folder called `04-js-intro`. You can also see the `audio` and `img` folders where our images and sound clips live.
+|||
 
-We tell `index.html` to load `main.js` in the `<head>` section at the top.
+Check out the file tree and you will find a file called `main.js`. This should be open already in the top panel on the left. You will need to click on the tab labeled `main.js` at the top to see the file.
+
+In the `<head>` tag in the `index.html` file, we tell the browser to load `main.js`.
 
 ```html
 <head>
@@ -283,7 +290,7 @@ We tell `index.html` to load `main.js` in the `<head>` section at the top.
 </head>
 ```
 
-Like the `<img>` tag, we tell the browser where to get this file from using the `src` attribute. It looks for it in the same location as `index.html` came from.
+Just as with the `<img>` tag, we tell the browser where to find this file using the `src` attribute. It will look in the same location as `index.html` came from. You could also tell it to load from another folder location, but we'll cover this another time.
 
 ### Events
 This next bit is great. We create a so-called *Event Handler*. Events can happen to any HTML element on your page. Here are just a few common events.
@@ -317,13 +324,13 @@ If you would rather watch a video than read, then here is a video overview. Expa
 <iframe src="//player.vimeo.com/video/120596684" width="500" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Accessing an HTML element from Javascript
-Whenever we want to do something with an HTML element, we have to get it from the *DOM*, which means **D**ocument **O**bject **M**odel. Don't worry about this name, we'll just use it for now.
+Whenever we want to do something with an HTML element, we have to get it from the *DOM*, which means **D**ocument **O**bject **M**odel. Don't worry about this name for the time being.
 
 ```html
 <audio id="cowsound" src="/audio/moo.mp3"></audio>
 ```
 
-When we created the `<audio>` element in `index.html`, we gave it a unique name we chose `cowsound`. In this case, we did this so Javascript can get this element quickly and easily.
+When we created the `<audio>` element in `index.html`, we gave it a unique  `cowsound` by specifying `id="cowsound"`. In this case, we did this so Javascript can get this element quickly and easily.
 
 ```javascript
 var cowAudio = document.getElementById("cowsound");
@@ -332,7 +339,7 @@ var cowAudio = document.getElementById("cowsound");
 What we are doing here is 
 
 - creating a new variable called `cowAudio`
-- looking for out HTML element using `document.getElementById("cowsound");`
+- searching the *DOM* for our HTML element using `document.getElementById("cowsound");`
 
 `getElementByID` is a function that the browser 'document' supplies us, which is why we have `document.` before it. Don't worry about this yet, just be happy to use it.
 
@@ -366,24 +373,31 @@ files:
   - action: open
     path: 05-css-intro/index.html
     panel: 0
+    index: 0
+    type: file
+    arg: 05-css-intro/index.html
   - action: open
     path: 05-css-intro/main.css
     panel: 0
+    index: 1
+    type: file
+    arg: 05-css-intro/main.css
   - action: open
     path: "#preview: 05-css-intro/index.html"
     panel: 1
+    index: 2
+    type: preview
+    arg: 05-css-intro/index.html
 layout: ""
-step: 05-css-intro;img;audio
+step: 05-css-intro;img;audio;my-play
 
 ---
 We're now going to introduce you to the missing piece of the jigsaw - CSS. 
 
 CSS (**C**ascading **S**tyle **S**heet) is a way of styling your HTML elements. 
 
->Although you can style your HTML directly within your HTML page, it is bad practice. For all but the simplest use cases, you should use a special file.
-
 ## Loading our CSS file
-In the same way we loaded our Javascript file `main.js`, we use load a CSS file within the `<head>` tag.
+In the same way we loaded our Javascript file `main.js`, we use load a CSS file within the `<head>` tag. Look at `index.html` on the left and you'll see how we load this.
 
 ```html
 <link rel="stylesheet" type="text/css" href="main.css">
@@ -391,7 +405,9 @@ In the same way we loaded our Javascript file `main.js`, we use load a CSS file 
 
 The key attribute that is specified here is `href="main.css"`. This tells the browser to load `main.css` from the same location`index.html`.
 
-
+|||important
+Although you can style your HTML directly within your HTML page, it is good to see how we use a separate file for our CSS. The main reason for this is that any number of HTML files (and bit sites and applications can have hundreds or thousands) can all use that one CSS file.
+|||
 
 
 
@@ -460,23 +476,14 @@ files:
   - action: open
     path: 06-css-play/index.html
     panel: 0
-    index: 0
-    type: file
-    arg: 06-css-play/index.html
   - action: open
     path: 06-css-play/main.css
     panel: 0
-    index: 1
-    type: file
-    arg: 06-css-play/main.css
   - action: open
     path: "#preview: 06-css-play/index.html"
     panel: 1
-    index: 2
-    type: preview
-    arg: 06-css-play/index.html
 layout: ""
-step: 06-css-play;img;audio
+step: 06-css-play;img;audio;my-play
 
 ---
 On the left, you'll find some ready made HTML and a starter CSS file. What we want you to do is to style your page so it looks something like the image below. 
@@ -518,7 +525,7 @@ files:
     path: "#preview: 07-classid/index.html"
     panel: 1
 layout: ""
-step: 07-classid;img;audio
+step: 07-classid;img;audio;my-play
 
 ---
 Take a look at the HTML, CSS and the preview. We now have a different setup. 
@@ -633,7 +640,7 @@ files:
     path: "#preview: 08-coolcss/index.html"
     panel: 1
 layout: ""
-step: 08-coolcss
+step: 08-coolcss;my-play
 
 ---
 We just want to give you an idea of how powerful the combination of HTML and CSS can be.
@@ -664,7 +671,7 @@ files:
     path: "#preview: 09-devtools/index.html"
     panel: 1
 layout: ""
-step: 09-devtools;img;audio
+step: 09-devtools;img;audio;my-play
 
 ---
 Now we are going to play with something that may seem scary at first, but believe us - it will make your life **much easier** as a web developer.
@@ -741,7 +748,7 @@ files:
     path: "#preview: 10-morejs/index.html"
     panel: 1
 layout: ""
-step: 10-morejs;img;audio
+step: 10-morejs;img;audio;my-play
 
 ---
 This is the last major thing we will cover in this module. Events and event listeners are incredibly important in web development.
@@ -755,7 +762,7 @@ This is the last major thing we will cover in this module. Events and event list
 > When **the mouse button is released**, do **throw a bird**
 
 ### Using HTML to create an event listener
-In an earlier chapter, we created an event listener from within the HTML like this
+In an earlier section, we created an event listener from within the HTML like this
 
 ```html
 <img src="/img/cow.jpg" onclick="moo();">
@@ -917,7 +924,7 @@ files:
     path: "#preview: 11-advanced-js/index.html"
     panel: 1
 layout: ""
-step: 11-advanced-js;img;audio
+step: 11-advanced-js;img;audio;my-play
 
 ---
 This advanced example is the last thing we'll deal with in this module. Although this looks like a real mouthful, we are only introducing one new concept, which we'll explain in the next section. 
@@ -928,7 +935,7 @@ But really this is nothing more than a bigger, more interesting application.
 This little web application lets you do the following ...
 
 - Create a cow or a sheep in the web page by clicking on the preview page. Go ahead and click a couple of times.
-- Delete the animal from the page by clikcing on it.
+- Delete the animal from the page by clicking on it.
 - If you want to create a cow, press the 'c' key before clicking.
 - If you want to create a sheep, press the 's' key before clicking.
 - If you want to toggle between a colored animal or a black and white one, press the 't' key.
@@ -936,9 +943,9 @@ This little web application lets you do the following ...
 - Try different key combinations to get different effects.
 
 ## Video
-Watch the video to see how the applicaiton works.
+Watch the video to see how the application works.
 
-<iframe src="//player.vimeo.com/video/120383889" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/121087326" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ---
