@@ -9,6 +9,6 @@ The first thing we are going to look at is how Developer Tools lets you see how 
 
 Watch this video for an overview.
 
-<iframe src="//player.vimeo.com/video/120383889" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/121096332" width="500" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
->If you make changes in your code, you will need to refresh the preview so the browswer loads those changes. If your dev tools window is already open, close it and reopen it so it also gets the new changes.
+>If you make changes in your code, you will need to refresh the preview so the browser loads those changes. If your dev tools window is already open, close it, reload thepage and then reopen dev tools so it also gets the new changes.

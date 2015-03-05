@@ -1,4 +1,4 @@
-A web page is made up of HTML elements. Our page has the following elements.
+A web page is made up of HTML elements. Our `index.html` page has the following elements.
 
 - **`<h1>`** is a header. `<h1>` is larger than `<h2>`, which is larger than `<h3>` etc. It is used for headers and titles usually.
 - **`<p>`** is a paragraph element (we usually call it a p tag). This is once common place where you put regular paragraphs of text. New lines within the text will not show up as new lines when the page displays.

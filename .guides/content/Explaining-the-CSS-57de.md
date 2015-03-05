@@ -21,6 +21,6 @@ Take a look at the preview window. You will see that our page looks different. I
 
 - **body** : the body styling is saying "for the entire body of the page and everything on it, a) set the background color to light-gray and b) use the font called Open Sans. We'll explain fonts more in a later section. The important thing to note here is that the font will now change for all other elements that are contained within the `<body>` tag of our HTML, so the `<h1>` and `<p>` elements are changed.
 - **h1** : here we are saying that wherever the browser sees an `<h1>` element on the page, we should a) set the color to blue and b) set the font-size to be 20 pixels high. You can play with these values if you like and see what happens.
-- **img** : we are doing something nice here. We are saying that for all `<img>` elements on the page, we should a) provide a solid border around the edge b) make the border 3 pixels thick and c) provide rounded corners to the border with a *radius* of 3 pixels. Again, feel free to change this value and see what happens.
+- **img** : we are doing something nice here. We are saying that for all `<img>` elements on the page, we should a) provide a solid border around the edge b) make the border 3 pixels thick and c) provide rounded corners to the border with a *radius* of 3 pixels. Feel free to change values, reload the preview and see what effect it has.
 
 

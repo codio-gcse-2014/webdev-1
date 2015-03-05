@@ -20,15 +20,15 @@ var cowAudio = document.getElementById("cowsound");
 
 What we are doing here is 
 
-- creating a new variable called `cowAudio`
 - searching the *DOM* for our HTML element using `document.getElementById("cowsound");`
+- assigning the element to a new variable called `cowAudio`
 
 `getElementByID` is a function that the browser 'document' supplies us, which is why we have `document.` before it. Don't worry about this yet, just be happy to use it.
 
 ## Making it Moo
-At this point, our variable `cowAudio` contains everything about  our moo audio clip that we could possibly want to use.
+At this point, our variable `cowAudio` contains everything about  our moo audio clip that we could possibly want to know or use.
 
-This variable is actually called an *object* variable as is contains a lot more information that just a single value. Again, don't worry about this.
+This variable is actually called an *object* variable as is contains a lot more information that just a single value. Again, don't worry about this for now.
 
 Our Javascript variable also contains functions! And yes, `play()` is one of those functions.
 

@@ -6,7 +6,9 @@ We have now created a new `index.html` page for you on the left. Create your own
 - an image that you find on Google images (see below)
 - anything else you fancy trying out
 
-> Your preview window is empty to start with. When you want to try out your changes, press the refresh button in the Preview window.
+|||important
+Your preview window is empty to start with. When you want to try out your changes, press the refresh button in the Preview window.
+|||
 
 ## Finding an image on Google Images
 We learned about the `<img>` tag earlier. Here's a reminder ...

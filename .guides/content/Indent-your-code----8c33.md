@@ -34,17 +34,14 @@ Feel free to use empty lines as well to make things clearer.
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="eng" lang="eng">
   
   <head>
-
   </head>
   
   <body onload="main();">
-
     <h1>Welcome to your first web page</h1>
     <p>This is a very boring paragraph of text.</p>
     <p>And this is another paragraph of text. Below is an image of a shaggy cow. Soon, we will get it to moo by clicking it. Notice that the <br> element forces a new line, not pressing enter.</p>
     <img id="shaggycow" src="/img/cow.jpg">
     <audio id="cowsound" src="/audio/moo.mp3" controls></audio>
-    
   </body>
   
 </html>

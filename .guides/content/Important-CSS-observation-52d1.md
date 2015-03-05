@@ -6,7 +6,7 @@ img {
 }
 ```
 
-This adds a margin of 40 pixels to the left of ALL images. It does not matter whether it is a cow image or a sheep image. It will add it to them all (so they are not so cramped together).
+This adds a margin of 40 pixels to the left of **ALL** img tags on our page. It does not matter whether it is a cow image or a sheep image. In this example, we are making sure that the images are not so cramped together.
 
 ## Overriding
 However, if you wanted to have a different left margin for the sheep, you could still add in a `margin-left` property and it would then override the `margin-left` property of the `img` selector.

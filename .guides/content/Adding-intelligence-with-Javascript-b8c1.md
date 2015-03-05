@@ -5,14 +5,14 @@ We will make our cow moo! All you need to do is click on the cow and it will moo
 ## Changes to the HTML
 
 ### Referencing our Javascript file
-Although it is actually possible to put Javascript code in the HTML file, the correct way to do it is to use another file.
+Although you can put Javascript code directly in the HTML file, for larger amounts of code and for code that should be shared by more than one HTML page, you should put your code in its own file. We have done this.
 
 |||important
 ## The File Tree
 The file tree is the panel on the extreme left hand side. It is a folder structure for our project. You can see that `index.html` and `main.js` both live in the folder called `04-js-intro`. You can also see the `audio` and `img` folders where our images and sound clips live.
 |||
 
-Check out the file tree and you will find a file called `main.js`. This should be open already in the top panel on the left. You will need to click on the tab labeled `main.js` at the top to see the file.
+Check out the file tree and you will find a file called `main.js`. This should be open already in the top panel on the left. You may need to click on the tab labeled `main.js` at the top to see the file.
 
 In the `<head>` tag in the `index.html` file, we tell the browser to load `main.js`.
 
@@ -30,7 +30,7 @@ This next bit is great. We create a so-called *Event Handler*. Events can happen
 - **onclick** - a mouse click on the element
 - **onmouseover** - user moves the mouse over the element
 - **focus** - an element gets the focus, which means it is currently selected. Most often used with data input fields, so you can do take an action as soon as the user puts the cursor into it.
-- **blur** - when an element loses the focus (user moves away from it). Often used to trigger data validations, for example.
+- **blur** - when an element loses the focus (user moves away from it). Often used to trigger data validations.
 
 The point of an event is to get Javascript to take control when the event happens. In our example, we want the cow to moo on the `onclick` event.
 
