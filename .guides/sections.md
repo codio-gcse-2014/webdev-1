@@ -840,6 +840,7 @@ The style attribute covers the same properties we use in a CSS file. Look at thi
 
 ```css
 img {
+  width: 100px;
   position: fixed;
   top: 100px;
   left: 100px;
