@@ -1,0 +1,501 @@
+{
+ "sections": [
+  {
+   "id": "bbf81ffe-5a98-6e61-4ba3-3fa06d09b92d",
+   "title": "An introduction to web development",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "01-html/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 01-html/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "3-cell-tree",
+   "path": [
+    "01-html",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/An-introduction-to-web-development-bbf8.md"
+  },
+  {
+   "id": "a2d84f7a-7591-51bb-f158-d7158e44313",
+   "title": "A really simple web page",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/A-really-simple-web-page-a2d8.md"
+  },
+  {
+   "id": "1cecdb86-5875-ad29-825e-a631dcb5272",
+   "title": "HTML Elements",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/HTML-Elements-1cec.md"
+  },
+  {
+   "id": "cd60f239-da56-fa9e-5cc4-d5b47ac646eb",
+   "title": "Attributes",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Attributes-cd60.md"
+  },
+  {
+   "id": "b8bf2216-4fe1-6916-8c15-8a708ae54d75",
+   "title": "A quick review of an HTML file",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "02-html-proper/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 02-html-proper/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "02-html-proper",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/A-quick-review-of-an-HTML-file-b8bf.md"
+  },
+  {
+   "id": "59d7429-11c5-77d3-57b0-31f516f76c8",
+   "title": "Your first HTML hack",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "03-task1/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 03-task1/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "03-task1",
+    "img",
+    "audio"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Your-first-HTML-hack-59d7.md"
+  },
+  {
+   "id": "8c337a60-8c3e-c214-5900-d8fad3b3c993",
+   "title": "Indent your code!!!",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Indent-your-code----8c33.md"
+  },
+  {
+   "id": "b8c14682-3bdd-6cce-569c-ac134c107f97",
+   "title": "Adding intelligence with Javascript",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "04-js-intro/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "04-js-intro/main.js",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 04-js-intro/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "04-js-intro",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Adding-intelligence-with-Javascript-b8c1.md"
+  },
+  {
+   "id": "e6c58fa-d6ed-188b-7500-6965af3312de",
+   "title": "moo()",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/moo---e6c5.md"
+  },
+  {
+   "id": "a1997ccc-d088-8f93-218c-b2156b3fa277",
+   "title": "Styling our HTML page",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "05-css-intro/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "05-css-intro/main.css",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 05-css-intro/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "05-css-intro",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Styling-our-HTML-page-a199.md"
+  },
+  {
+   "id": "57debebf-7ea7-6d54-3112-a2788f05b272",
+   "title": "Explaining the CSS",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Explaining-the-CSS-57de.md"
+  },
+  {
+   "id": "e940441-ead9-a81e-49f2-f4108c3bea2f",
+   "title": "Available CSS Selectors",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Available-CSS-Selectors-e940.md"
+  },
+  {
+   "id": "c0d9ec62-dbb0-95c6-ea5e-ba9e25866048",
+   "title": "Your own CSS experiment",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "06-css-play/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "06-css-play/main.css",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 06-css-play/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "06-css-play",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Your-own-CSS-experiment-c0d9.md"
+  },
+  {
+   "id": "9d25fa5-4d94-11c1-ebb3-982f452aa1a8",
+   "title": "Classes",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "07-classid/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "07-classid/main.css",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 07-classid/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "07-classid",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Classes-9d25.md"
+  },
+  {
+   "id": "2491c21c-fa36-569c-210d-bc2a10124f75",
+   "title": "IDs",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/IDs-2491.md"
+  },
+  {
+   "id": "52d19f9a-bac6-f076-74a8-1c41a6a19f72",
+   "title": "Important CSS observation",
+   "files": [],
+   "layout": "",
+   "path": [
+    "08-coolcss"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Important-CSS-observation-52d1.md"
+  },
+  {
+   "id": "bcd5bd6a-e5fe-7d4c-22de-df64f829c123",
+   "title": "Cool CSS Example",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "08-coolcss/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "08-coolcss/main.css",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 08-coolcss/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "08-coolcss",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Cool-CSS-Example-bcd5.md"
+  },
+  {
+   "id": "a42a4866-7710-2bb9-778-16d3450c7974",
+   "title": "Developer Tools - HTML & CSS",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "09-devtools/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "09-devtools/main.css",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "09-devtools/main.js",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 09-devtools/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "09-devtools",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Developer-Tools---HTML---CSS-a42a.md"
+  },
+  {
+   "id": "1c3ba279-9b0e-8b51-4b51-f964a7e9bc73",
+   "title": "Developer Tools - Javascript",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Developer-Tools---Javascript-1c3b.md"
+  },
+  {
+   "id": "136a78cd-c57e-87d1-2444-d7ab633cbcf6",
+   "title": "Experiment with Dev Tools",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Experiment-with-Dev-Tools-136a.md"
+  },
+  {
+   "id": "98c01127-9363-9cc5-a712-9e50169c60a8",
+   "title": "Event listeners",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "10-morejs/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "10-morejs/main.js",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 10-morejs/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "10-morejs",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Event-listeners-98c0.md"
+  },
+  {
+   "id": "39ad2c35-5f7b-647c-2dea-55d7ace3ef4",
+   "title": "Event handlers",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Event-handlers-39ad.md"
+  },
+  {
+   "id": "c260e9f1-984b-9035-3d43-b9ccd0b3d1f",
+   "title": "Advanced example",
+   "files": [
+    {
+     "path": "#tabs",
+     "action": "close"
+    },
+    {
+     "path": "11-advanced-js/index.html",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "11-advanced-js/main.css",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "11-advanced-js/main.js",
+     "panel": 0,
+     "action": "open"
+    },
+    {
+     "path": "#preview: 11-advanced-js/index.html",
+     "panel": 1,
+     "action": "open"
+    }
+   ],
+   "layout": "",
+   "path": [
+    "11-advanced-js",
+    "img",
+    "audio",
+    "my-play"
+   ],
+   "type": "markdown",
+   "content-file": ".guides/content/Advanced-example-c260.md"
+  },
+  {
+   "id": "36a1dc4b-5e5-6d6f-efdd-eba68f66822",
+   "title": "How it works",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/How-it-works-36a1.md"
+  },
+  {
+   "id": "3fccc291-fa59-fa-59ee-b1c3e54661df",
+   "title": "Objects",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Objects-3fcc.md"
+  },
+  {
+   "id": "2a2238ce-a822-7d31-3129-81d719ceefc0",
+   "title": "Global variables",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Global-variables-2a22.md"
+  },
+  {
+   "id": "ac82ece6-c7b7-4ecb-b489-c7593f014073",
+   "title": "That's all folks",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/That-s-all-folks-ac82.md"
+  }
+ ]
+}
